@@ -67,6 +67,13 @@ os:probability rdfs:subPropertyOf os:statementModifier ;
   rdfs:range xsd:number ;
   os:folMapping "<<?s ?p ?o>> os:probability ?pr -> (probability (that (?p ?s ?o)) ?pr".
 
+os:frequentistProbability rdfs:subPropertyOf os:statementModifier ;
+  rdfs:label "frequentist probability"@en ;
+  rdfs:comment "maps a statement to a frequentist probability, i.e. the probability of an event (i.e. the statement) as the limit of the relative frequency in many trials (i.e. the knowledge graph from which the statement is extracted)." ;
+  rdfs:domain rdf:Statement ;
+  rdfs:range xsd:number ;
+  os:folMapping "<<?s ?p ?o>> os:frequentistProbability ?pr -> (frequentist probability (that (?p ?s ?o)) ?pr".
+
 os:LogicalInterpretation a owl:Class ;
   rdfs:label "logical interpretation modifier"@en ;
   rdfs:comment "grouping" .
